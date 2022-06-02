@@ -43,9 +43,11 @@ def app_five(block_list):
     index = len(block_list)
 
     for i in range(5):
+
         M4BlockChain.append(
                     Block(index+i,
                     datetime.now(),
                     "this is block " + str(index+i),
-                    block_list[index+i - 1].hash))
+                    block_list[index - 1 + i].hash))
+
 
